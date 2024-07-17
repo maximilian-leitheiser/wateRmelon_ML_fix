@@ -195,7 +195,7 @@ pfilter<-function (mn=NULL, un=NULL, bn=NULL, da=NULL, pn, bc, perCount = NULL, 
              	
 		goodsamp <- (colSums(pn > pnthresh)) < ((nrow(pn) * perc)/100)
       
-      bab <- apply(bc[,goodsamp],1,beadc)
+      bab <- apply(bc[,goodsamp,drop = FALSE],1,beadc)
       badbead <- which(bab>(ncol(bc) * perCount)/100)
       badbead_log<-bab>(ncol(bc) * perCount)/100
 
