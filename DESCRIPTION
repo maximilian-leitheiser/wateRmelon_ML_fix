@@ -1,4 +1,4 @@
-Package: wateRmelon
+Package: wateRmelon_ML_fix
 Type: Package
 Title: Illumina DNA methylation array normalization and metrics
 Version: 2.11.2
