@@ -195,11 +195,11 @@ pfilter<-function (mn=NULL, un=NULL, bn=NULL, da=NULL, pn, bc, perCount = NULL, 
              	
 		goodsamp <- (colSums(pn > pnthresh)) < ((nrow(pn) * perc)/100)
       
-      bab <- apply(bc[,goodsamp,drop = FALSE],1,beadc)
+      bab <- apply(bc[, goodsamp, drop = FALSE],1,beadc)
       badbead <- which(bab>(ncol(bc) * perCount)/100)
       badbead_log<-bab>(ncol(bc) * perCount)/100
 
-      bap  <- rowSums(pn[, goodsamp] > pnthresh) > ((ncol(pn) * pthresh/100))
+      bap  <- rowSums(pn[, goodsamp, drop = FALSE] > pnthresh) > ((ncol(pn) * pthresh/100))
       badp <- which(bap)
         	
 		cat( length(which(goodsamp==FALSE)), "samples having", perc, "% of sites with a detection p-value greater than", pnthresh, "were removed","\n")
